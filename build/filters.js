@@ -154,6 +154,7 @@ module.exports.copyrightFilter = [
 	'!extensions/markdown-language-features/media/highlight.css',
 	'!extensions/markdown-math/notebook-out/**',
 	'!extensions/html-language-features/server/src/modes/typescript/*',
+	'!extensions/naivesystems.analyze/**',
 	'!extensions/*/server/bin/*',
 	'!src/vs/editor/test/node/classification/typescript-test.ts',
 ];
