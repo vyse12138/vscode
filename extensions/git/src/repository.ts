@@ -1223,32 +1223,31 @@ export class Repository implements Disposable {
 		const workingGroupResources = opts.all && opts.all !== 'tracked' ?
 			[...this.workingTreeGroup.resourceStates.map(r => r.resourceUri.fsPath)] : [];
 
-		if (this.rebaseCommit) {
+		// Remember that we are in the middle of a rebase
+		const rebaseInProgress = !!this.rebaseCommit;
+
+		// Commit
+		await this.run(Operation.Commit, async () => {
+			if (opts.all) {
+				const addOpts = opts.all === 'tracked' ? { update: true } : {};
+				await this.repository.add([], addOpts);
+			}
+
+			delete opts.all;
+
+			if (opts.requireUserConfig === undefined || opts.requireUserConfig === null) {
+				const config = workspace.getConfiguration('git', Uri.file(this.root));
+				opts.requireUserConfig = config.get<boolean>('requireGitUserConfig');
+			}
+
+			await this.repository.commit(message, opts);
+			this.closeDiffEditors(indexResources, workingGroupResources);
+		});
+
+		// Rebase continue
+		if (rebaseInProgress) {
 			await this.run(Operation.RebaseContinue, async () => {
-				if (opts.all) {
-					const addOpts = opts.all === 'tracked' ? { update: true } : {};
-					await this.repository.add([], addOpts);
-				}
-
 				await this.repository.rebaseContinue();
-				this.closeDiffEditors(indexResources, workingGroupResources);
-			});
-		} else {
-			await this.run(Operation.Commit, async () => {
-				if (opts.all) {
-					const addOpts = opts.all === 'tracked' ? { update: true } : {};
-					await this.repository.add([], addOpts);
-				}
-
-				delete opts.all;
-
-				if (opts.requireUserConfig === undefined || opts.requireUserConfig === null) {
-					const config = workspace.getConfiguration('git', Uri.file(this.root));
-					opts.requireUserConfig = config.get<boolean>('requireGitUserConfig');
-				}
-
-				await this.repository.commit(message, opts);
-				this.closeDiffEditors(indexResources, workingGroupResources);
 			});
 		}
 	}
