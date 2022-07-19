@@ -1223,9 +1223,6 @@ export class Repository implements Disposable {
 		const workingGroupResources = opts.all && opts.all !== 'tracked' ?
 			[...this.workingTreeGroup.resourceStates.map(r => r.resourceUri.fsPath)] : [];
 
-		// Remember that we are in the middle of a rebase
-		const rebaseInProgress = !!this.rebaseCommit;
-
 		// Commit
 		await this.run(Operation.Commit, async () => {
 			if (opts.all) {
@@ -1245,7 +1242,7 @@ export class Repository implements Disposable {
 		});
 
 		// Rebase continue
-		if (rebaseInProgress) {
+		if (this.rebaseCommit) {
 			await this.run(Operation.RebaseContinue, async () => {
 				await this.repository.rebaseContinue();
 			});
