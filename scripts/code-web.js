@@ -61,7 +61,7 @@ async function main() {
 	}
 	if (args['playground'] === true || (args['_'].length === 0 && !args['--folder-uri'])) {
 		serverArgs.push('--extensionPath', WEB_DEV_EXTENSIONS_ROOT);
-		serverArgs.push('--folder-uri', 'memfs:///sample-folder');
+		serverArgs.push('--folder-uri', '');
 		await ensureWebDevExtensions(args['verbose']);
 	}
 

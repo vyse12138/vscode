@@ -13,8 +13,8 @@
   "activationEvents": [
     "*"
   ],
-  "main": "./out/extension.js",
-  "browser": "./dist/web/main.js",
+  "main": "./out/dummy.js",
+  "browser": "./out/dummy.js",
   "contributes": {
     "colors": [
       {

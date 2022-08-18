@@ -33,6 +33,7 @@ exports.dirs = [
 	'extensions/markdown-math',
 	'extensions/merge-conflict',
 	'extensions/microsoft-authentication',
+	'extensions/naivesystems.analyze',
 	'extensions/notebook-renderers',
 	'extensions/npm',
 	'extensions/php-language-features',
