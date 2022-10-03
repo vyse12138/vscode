@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+body:focus-within {
+  outline: 1px solid #377dce;
+  outline-offset: -1px;
+}
+
+button {
+  margin: 16px;
+  padding: 4px;
+  width: 100%;
+  max-width: 300px;
+  height: 26px;
+  border: none;
+  background-color: #0e639c;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #007acc;
+}

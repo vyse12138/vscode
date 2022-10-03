@@ -3,7 +3,7 @@
   "publisher": "naivesystems",
   "displayName": "NaiveSystems Analyze (Extension)",
   "description": "",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "engines": {
     "vscode": "^1.64.0"
   },
@@ -13,8 +13,8 @@
   "activationEvents": [
     "*"
   ],
-  "main": "./out/dummy.js",
-  "browser": "./out/dummy.js",
+  "main": "./out/extension.js",
+  "browser": "./dist/web/main.js",
   "contributes": {
     "colors": [
       {
@@ -30,37 +30,83 @@
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "nsa-result-highlight-result",
-          "title": "Results Explorer",
+          "id": "nsa-result-highlight-result-sidebar",
+          "title": "NaiveSystems Analyze",
+          "icon": "media/nsa-activitybar.png"
+        }
+      ],
+      "panel": [
+        {
+          "id": "nsa-result-highlight-result-panel",
+          "title": "静态分析结果",
           "icon": "media/nsa-activitybar.png"
         }
       ]
     },
     "views": {
-      "nsa-result-highlight-result": [
+      "nsa-result-highlight-result-sidebar": [
         {
-          "id": "nsa-result-highlight.result-explorer",
-          "name": "Result List",
-          "icon": "media/nsa-activitybar.png"
+          "id": "nsa-result-highlight.sidebar",
+          "name": "",
+          "type": "webview"
+        }
+      ],
+      "nsa-result-highlight-result-panel": [
+        {
+          "id": "nsa-result-highlight.panel",
+          "name": "",
+          "type": "webview"
         }
       ]
     },
     "commands": [
       {
         "command": "nsa-result-highlight.reload-results-files",
-        "title": "Reload Results Files",
+        "title": "重新加载静态分析结果",
         "category": "Naive System Analyze",
         "icon": {
           "light": "media/refresh-light.svg",
           "dark": "media/refresh-dark.svg"
+        }
+      },
+      {
+        "command": "nsa-result-highlight.run",
+        "title": "Generate Tarball of HEAD files",
+        "category": "Naive System Analyze",
+        "icon": {
+          "light": "media/run-light.svg",
+          "dark": "media/run-dark.svg"
+        }
+      },
+      {
+        "command": "nsa-result-highlight.reload-panel",
+        "title": "重新加载静态分析结果",
+        "category": "Naive System Analyze",
+        "icon": {
+          "light": "media/refresh-light.svg",
+          "dark": "media/refresh-dark.svg"
+        }
+      },
+      {
+        "command": "nsa-result-highlight.import-results-from-zip",
+        "title": "从 zip 文件导入静态分析结果",
+        "category": "Naive System Analyze",
+        "icon": {
+          "light": "media/import-zip-light.svg",
+          "dark": "media/import-zip-dark.svg"
         }
       }
     ],
     "menus": {
       "view/title": [
         {
-          "command": "nsa-result-highlight.reload-results-files",
-          "when": "view == nsa-result-highlight.result-explorer",
+          "command": "nsa-result-highlight.reload-panel",
+          "when": "view == nsa-result-highlight.panel",
+          "group": "navigation"
+        },
+        {
+          "command": "nsa-result-highlight.import-results-from-zip",
+          "when": "view == nsa-result-highlight.panel",
           "group": "navigation"
         }
       ]
@@ -77,6 +123,7 @@
     "package-web": "webpack --mode production --devtool hidden-source-map --entry ./src/browser.ts"
   },
   "devDependencies": {
+    "@types/adm-zip": "^0.5.0",
     "@types/glob": "^7.2.0",
     "@types/google-protobuf": "^3.15.5",
     "@types/mocha": "^9.0.0",
@@ -95,8 +142,16 @@
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
+    "adm-zip": "^0.5.9",
+    "assert": "^2.0.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "child_process": "^1.0.2",
+    "crypto-browserify": "^3.12.0",
     "js-sha1": "^0.6.0",
+    "path-browserify": "^1.0.1",
     "prettier": "^2.6.0",
+    "stream-browserify": "^3.0.0",
     "ts-protoc-gen": "^0.15.0",
     "vsce": "^2.7.0"
   }

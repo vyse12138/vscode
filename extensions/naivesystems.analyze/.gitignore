@@ -1,0 +1,10 @@
+out
+dist
+node_modules
+.vscode-test/
+*.vsix
+yarn-error.log
+
+# Generated protos
+src/results_pb.js
+src/results_pb.d.ts
