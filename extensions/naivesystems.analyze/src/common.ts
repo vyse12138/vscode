@@ -6,6 +6,8 @@ import { PanelViewProvider } from "./panel"
 import { SidebarViewProvider } from "./sidebar"
 import { Run } from "./redmine"
 import * as AdmZip from "adm-zip"
+import IntroProvider from "./intro"
+import { matchAllLocations } from "./util"
 
 var sha1 = require("js-sha1")
 
@@ -17,6 +19,12 @@ export const getFileLocation = (result: Result) =>
   result.getPath().slice(result.getPath().lastIndexOf("/") + 1) +
   ":" +
   result.getLineNumber()
+
+// function to check if the current vscode theme is white
+export const isWhiteTheme = () =>
+  vscode.window.activeColorTheme.kind === vscode.ColorThemeKind.Light ||
+  vscode.window.activeColorTheme.kind ===
+    vscode.ColorThemeKind.HighContrastLight
 
 const diagnosticCollection =
   vscode.languages.createDiagnosticCollection("nsa-result")
@@ -103,9 +111,7 @@ const getLocationsFromErrorMessage = (errorMessage: string) => {
     return { locations: locations, paths: paths }
   }
   const workspaceRoot = vscode.workspace.workspaceFolders[0].uri.fsPath
-  const matches = [
-    ...errorMessage.matchAll(/((\/[^/ \s]*)+\/?:\d+:\d+|(\/[^/ \s]*)+\/?)/g),
-  ]
+  const matches = matchAllLocations(errorMessage)
   matches.forEach((matchedGroup) => {
     const matchedPath = matchedGroup[0]
     paths.push(matchedPath)
@@ -311,6 +317,29 @@ const addSuppresionToFile = async (
   )
 }
 
+export const getResultsFromFile = async (
+  fileUri: vscode.Uri[] | undefined
+): Promise<(Result | undefined)[]> => {
+  if (fileUri && fileUri[0]) {
+    const zipUri = fileUri[0]
+    const zip = new AdmZip(zipUri.fsPath)
+    const buf = zip.readFile("results.nsa_results")
+    if (buf !== null) {
+      results.clear()
+      ruleLocationsMap.clear()
+      allFileResultsListMap.clear()
+      const resultsData = new Uint8Array(buf)
+      const resultsList = getResults(resultsData)
+      updateReultsView()
+      return resultsList
+    } else {
+      vscode.window.showInformationMessage("Fail to find results files")
+      return []
+    }
+  }
+  return []
+}
+
 export const importResultsFromZip = async (
   uri: vscode.Uri
 ): Promise<(Result | undefined)[]> => {
@@ -326,24 +355,7 @@ export const importResultsFromZip = async (
       openLabel: "select zip files",
     })
     .then((fileUri) => {
-      if (fileUri && fileUri[0]) {
-        const zipUri = fileUri[0]
-        const zip = new AdmZip(zipUri.fsPath)
-        const buf = zip.readFile("results.nsa_results")
-        if (buf !== null) {
-          results.clear()
-          ruleLocationsMap.clear()
-          allFileResultsListMap.clear()
-          const resultsData = new Uint8Array(buf)
-          const resultsList = getResults(resultsData)
-          updateReultsView()
-          return resultsList
-        } else {
-          vscode.window.showInformationMessage("Fail to find results files")
-          return []
-        }
-      }
-      return []
+      return getResultsFromFile(fileUri)
     })
 }
 
@@ -379,15 +391,17 @@ export function activate(
     `reloadResultsFiles done, results.size: ${results.size}, ruleLocationsMap.size: ${ruleLocationsMap.size}`
   )
 
+  const introProvider = new IntroProvider(context)
+
   vscode.window.registerWebviewViewProvider(
     "nsa-result-highlight.panel",
-    new PanelViewProvider(context),
+    new PanelViewProvider(context, introProvider),
     { webviewOptions: { retainContextWhenHidden: true } }
   )
 
   vscode.window.registerWebviewViewProvider(
     "nsa-result-highlight.sidebar",
-    new SidebarViewProvider(context),
+    new SidebarViewProvider(context, introProvider),
     { webviewOptions: { retainContextWhenHidden: true } }
   )
 

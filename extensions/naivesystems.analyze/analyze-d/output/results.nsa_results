@@ -1,0 +1,39 @@
+
+¦
+/src/demo.c”[C0302][misra-c2012-19.1]: violation of misra-c2012-19.1, assign or copy is overlapped
+[misrac-2012-19.1]: violate rule 19.1, assignment has overlap
+õ
+/src/demo.cÁ[C1109][misra-c2012-5.1]: violation of misra-c2012-5.1
+Variable: engine_exhaust_gas_temperature_scaled
+First identifier location: /src/demo.c:7:1
+Duplicated identifier location: /src/demo.c:6:1"
+/src/demo.c"
+/src/demo.c
+ë
+/src/demo.c·[C1109][misra-c2012-5.1]: violation of misra-c2012-5.1
+Variable: engine_exhaust_gas_temp_raw
+First identifier location: /src/demo.c:8:1
+Duplicated identifier location: /src/demo.c:6:1"
+/src/demo.c"
+/src/demo.c
+î
+/src/demo.c	º[C1109][misra-c2012-5.1]: violation of misra-c2012-5.1
+Variable: engine_exhaust_gas_temp_scaled
+First identifier location: /src/demo.c:9:1
+Duplicated identifier location: /src/demo.c:6:1"
+/src/demo.c	"
+/src/demo.c
+¶
+/src/demo.c“[C0513][misra-c2012-8.2]: function types shall be in prototype form with named parameters
+unnamed parameter.
+function name: func_param_without_name"
+/src/demo.c
+E
+/src/demo.c#[C1203][misra-c2012-9.3]: c2012-9.3"
+/src/demo.c
+G
+/src/demo.c%[C0301][misra-c2012-19.2]: c2012-19.2"
+/src/demo.c
+E
+/src/demo.c#[C0904][misra-c2012-7.1]: c2012-7.1"
+/src/demo.c

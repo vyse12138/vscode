@@ -1,0 +1,13 @@
+[
+    {
+        "path": "/src/demo.c",
+        "line_number": 14,
+        "error_message": "[C0904][misra-c2012-7.1]: c2012-7.1",
+        "locations": [
+            {
+                "path": "/src/demo.c",
+                "line_number": 14
+            }
+        ]
+    }
+]

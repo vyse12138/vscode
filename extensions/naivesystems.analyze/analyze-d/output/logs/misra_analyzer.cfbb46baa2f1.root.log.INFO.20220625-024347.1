@@ -1,0 +1,86 @@
+Log file created at: 2022/06/25 02:43:47
+Running on machine: cfbb46baa2f1
+Binary: Built with gc go1.18.2 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0625 02:43:47.661080       1 main.go:80] configDir /config
+I0625 02:43:47.661391       1 main.go:81] checkerConfig{"csa_system_lib_options":"-isystem /usr/lib/gcc/x86_64-redhat-linux/11/include/ -isystem /usr/include",
+			"infer_bin":"infer",
+			"clang_bin":"/opt/naivesystems/clang",
+			"code_checker_bin":"CodeChecker",
+			"cppcheck_bin":"/cppcheck/cppcheck",
+			"python_bin":"python",
+			"clangtidy_bin":"clang-tidy",
+			"clangquery_bin":"/opt/naivesystems/clang-query",
+			"misra_checker_path":"/opt/naivesystems/misra",
+			"num_workers":14,
+			"infer_extra_options":"--jobs=8 --max-nesting=3 --bo-field-depth-limit=6"}
+I0625 02:43:47.661578       1 main.go:130] executing: /usr/bin/cmake . -DCMAKE_CXX_COMPILER=clang -DCMAKE_EXPORT_COMPILE_COMMANDS=on
+I0625 02:43:48.329586       1 main.go:160] compileCommandsPath /src/compile_commands.json
+I0625 02:43:48.336330       1 main.go:171] checkRulesPath /config/check_rules
+I0625 02:43:48.336513       1 run_analyzer.go:187] Start PreAnalyze
+I0625 02:43:48.336524       1 run_analyzer.go:202] clean cache: ignoring log dir: logs
+I0625 02:43:48.336527       1 dir_utils.go:22] cleaning cache in /output
+I0625 02:43:48.336557       1 dir_utils.go:41] cleaned /output
+I0625 02:43:48.336888       1 ctu.go:64] executing: /usr/local/bin/CodeChecker analyze --ctu-collect --ctu-ast-mode parse-on-demand -o /output /src/filtered_compile_commands.json
+I0625 02:43:49.026615       1 run_cppcheck.go:47] executing: /cppcheck/cppcheck --abspath --dump --quiet --max-configs=1 --std=c99 --dump-file=/output/src/demo.c.c99.dump /src/demo.c -include stddef.h -D__GNUC__
+I0625 02:43:49.034037       1 run_cppcheck.go:47] executing: /cppcheck/cppcheck --abspath --dump --quiet --max-configs=1 --std=c90 --dump-file=/output/src/demo.c.c90.dump /src/demo.c -include stddef.h -D__GNUC__
+I0625 02:43:49.040861       1 run_analyzer.go:290] Finish PreAnalyze
+I0625 02:43:49.040870       1 run_analyzer.go:298] Start Analyze
+I0625 02:43:49.041092       1 run_analyzer.go:121] in rule_5_1-612863811: misra_c_2012/rule_5_1 { "case-sensitive": false, "limit": 6 }
+I0625 02:43:49.041152       1 run_analyzer.go:121] in rule_19_1-4029767944: misra_c_2012/rule_19_1 {}
+I0625 02:43:49.041148       1 run_analyzer.go:404] executing: /opt/naivesystems/misra/rule_5_1 --json-options={ "case-sensitive": false, "limit": 6 } --results-path=/output/rule_5_1-612863811/results --extra-arg -target --extra-arg x86_64 --extra-arg -isystem --extra-arg /usr/lib/gcc/x86_64-redhat-linux/11/include/ --extra-arg -isystem --extra-arg /usr/include --extra-arg -D__GNUC__ /src/demo.c
+I0625 02:43:49.041181       1 run_analyzer.go:121] in rule_9_3-2893353270: misra_c_2012/rule_9_3 {}
+I0625 02:43:49.041233       1 run_analyzer.go:121] in rule_12_4-2996594539: misra_c_2012/rule_12_4 {}
+I0625 02:43:49.041286       1 run_analyzer.go:121] in rule_7_1-54328162: misra_c_2012/rule_7_1 {}
+I0625 02:43:49.041299       1 run_csa.go:94] in rule_19_1-4029767944, cd to :/src
+I0625 02:43:49.041310       1 run_csa.go:95] in rule_19_1-4029767944, executing: /opt/naivesystems/clang -cc1 -analyze -analyzer-output=sarif -o /output/rule_19_1-4029767944/csa-out/report.json /src/demo.c -analyzer-config experimental-enable-naive-ctu-analysis=true -analyzer-config ctu-dir=/output/ctu-dir/x86_64 -analyzer-config ctu-invocation-list=/output/ctu-dir/x86_64/invocation-list.yml -triple x86_64 -isystem /usr/lib/gcc/x86_64-redhat-linux/11/include/ -isystem /usr/include -analyzer-checker=alpha.unix.cstring.BufferOverlap -analyzer-checker=misra_c_2012.AssignmentOverlap -include stddef.h -D__GNUC__
+I0625 02:43:49.041320       1 run_cppcheck.go:86] in rule_9_3-2893353270, executing: /usr/bin/python /cppcheck/addons/misra.py --check_rules=misra_c_2012/rule_9_3 --output_dir /output/rule_9_3-2893353270 /output/src/demo.c.c99.dump --create-dump-error /src/demo.c:28:6: error: Overlapping read/write of union is undefined behavior [overlappingWriteUnion]
+ a.i = a.j;
+     ^
+I0625 02:43:49.041336       1 run_cppcheck.go:86] in rule_12_4-2996594539, executing: /usr/bin/python /cppcheck/addons/misra.py --check_rules=misra_c_2012/rule_12_4 --output_dir /output/rule_12_4-2996594539 /output/src/demo.c.c99.dump --create-dump-error /src/demo.c:28:6: error: Overlapping read/write of union is undefined behavior [overlappingWriteUnion]
+ a.i = a.j;
+     ^
+I0625 02:43:49.041393       1 run_analyzer.go:121] in rule_19_2-1311819517: misra_c_2012/rule_19_2 {}
+I0625 02:43:49.041407       1 run_cppcheck.go:86] in rule_7_1-54328162, executing: /usr/bin/python /cppcheck/addons/misra.py --check_rules=misra_c_2012/rule_7_1 --output_dir /output/rule_7_1-54328162 /output/src/demo.c.c99.dump --create-dump-error /src/demo.c:28:6: error: Overlapping read/write of union is undefined behavior [overlappingWriteUnion]
+ a.i = a.j;
+     ^
+I0625 02:43:49.041440       1 run_analyzer.go:121] in rule_8_2-2347320918: misra_c_2012/rule_8_2 {}
+I0625 02:43:49.041502       1 run_analyzer.go:121] in rule_5_2-2808427562: misra_c_2012/rule_5_2 { "standard": "c90" }
+I0625 02:43:49.041527       1 run_cppcheck.go:86] in rule_19_2-1311819517, executing: /usr/bin/python /cppcheck/addons/misra.py --check_rules=misra_c_2012/rule_19_2 --output_dir /output/rule_19_2-1311819517 /output/src/demo.c.c99.dump --create-dump-error /src/demo.c:28:6: error: Overlapping read/write of union is undefined behavior [overlappingWriteUnion]
+ a.i = a.j;
+     ^
+I0625 02:43:49.041532       1 run_analyzer.go:419] executing: /opt/naivesystems/misra/rule_8_2 --results-path=/output/rule_8_2-2347320918/results --extra-arg -target --extra-arg x86_64 --extra-arg -isystem --extra-arg /usr/lib/gcc/x86_64-redhat-linux/11/include/ --extra-arg -isystem --extra-arg /usr/include --extra-arg -D__GNUC__ /src/demo.c
+I0625 02:43:49.041582       1 run_cppcheck.go:86] in rule_5_2-2808427562, executing: /usr/bin/python /cppcheck/addons/misra.py --check_rules=misra_c_2012/rule_5_2 --output_dir /output/rule_5_2-2808427562 /output/src/demo.c.c90.dump --create-dump-error /src/demo.c:28:6: error: Overlapping read/write of union is undefined behavior [overlappingWriteUnion]
+ a.i = a.j;
+     ^
+I0625 02:43:49.051151       1 run_csa.go:334] [C0302][misra-c2012-19.1]: violation of misra-c2012-19.1, assign or copy is overlapped
+[misrac-2012-19.1]: violate rule 19.1, assignment has overlap
+I0625 02:43:49.051161       1 run_analyzer.go:179] in rule_19_1-4029767944: checker CSA reported 1 results
+I0625 02:43:49.051174       1 run_analyzer.go:182] in rule_19_1-4029767944: totally reported 1 results
+I0625 02:43:49.051184       1 run_analyzer.go:318] Checking: 1/8 rules
+I0625 02:43:49.067733       1 run_analyzer.go:370] parsed 3 results from /output/rule_5_1-612863811/results
+I0625 02:43:49.067745       1 run_analyzer.go:179] in rule_5_1-612863811: checker Libtooling_CTU reported 3 results
+I0625 02:43:49.067750       1 run_analyzer.go:182] in rule_5_1-612863811: totally reported 3 results
+I0625 02:43:49.067759       1 run_analyzer.go:318] Checking: 2/8 rules
+I0625 02:43:49.067770       1 run_analyzer.go:370] parsed 1 results from /output/rule_8_2-2347320918/results
+I0625 02:43:49.067777       1 run_analyzer.go:179] in rule_8_2-2347320918: checker Libtooling_STU reported 1 results
+I0625 02:43:49.067782       1 run_analyzer.go:182] in rule_8_2-2347320918: totally reported 1 results
+I0625 02:43:49.067789       1 run_analyzer.go:318] Checking: 3/8 rules
+I0625 02:43:49.124525       1 run_analyzer.go:179] in rule_12_4-2996594539: checker Cppcheck_STU reported 0 results
+I0625 02:43:49.124534       1 run_analyzer.go:182] in rule_12_4-2996594539: totally reported 0 results
+I0625 02:43:49.124542       1 run_analyzer.go:318] Checking: 4/8 rules
+I0625 02:43:49.125452       1 run_analyzer.go:179] in rule_9_3-2893353270: checker Cppcheck_STU reported 1 results
+I0625 02:43:49.125458       1 run_analyzer.go:182] in rule_9_3-2893353270: totally reported 1 results
+I0625 02:43:49.125465       1 run_analyzer.go:318] Checking: 5/8 rules
+I0625 02:43:49.126048       1 run_analyzer.go:179] in rule_19_2-1311819517: checker Cppcheck_STU reported 1 results
+I0625 02:43:49.126053       1 run_analyzer.go:182] in rule_19_2-1311819517: totally reported 1 results
+I0625 02:43:49.126055       1 run_analyzer.go:318] Checking: 6/8 rules
+I0625 02:43:49.126120       1 run_analyzer.go:179] in rule_5_2-2808427562: checker Cppcheck_STU reported 0 results
+I0625 02:43:49.126124       1 run_analyzer.go:182] in rule_5_2-2808427562: totally reported 0 results
+I0625 02:43:49.126133       1 run_analyzer.go:318] Checking: 7/8 rules
+I0625 02:43:49.126470       1 run_analyzer.go:179] in rule_7_1-54328162: checker Cppcheck_STU reported 1 results
+I0625 02:43:49.126475       1 run_analyzer.go:182] in rule_7_1-54328162: totally reported 1 results
+I0625 02:43:49.126482       1 run_analyzer.go:318] Checking: 8/8 rules
+I0625 02:43:49.126493       1 run_analyzer.go:344] Finish Analyze
+I0625 02:43:49.126517       1 main.go:214] ignoreDirPatterns: []
+I0625 02:43:49.126599       1 main.go:239] All results have been written to /output/results (8 in total), exit. 

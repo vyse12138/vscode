@@ -1,0 +1,326 @@
+<?xml version="1.0"?>
+<dumps>
+  <platform name="Native" char_bit="8" short_bit="16" int_bit="32" long_bit="64" long_long_bit="64" pointer_bit="64"/>
+  <rawtokens>
+    <file index="0" name="/src/demo.c"/>
+    <tok fileIndex="0" linenr="1" column="1" str="#"/>
+    <tok fileIndex="0" linenr="1" column="2" str="include"/>
+    <tok fileIndex="0" linenr="1" column="10" str="&lt;stdint.h&gt;"/>
+    <tok fileIndex="0" linenr="3" column="1" str="extern"/>
+    <tok fileIndex="0" linenr="3" column="8" str="int16_t"/>
+    <tok fileIndex="0" linenr="3" column="16" str="func_param_without_name"/>
+    <tok fileIndex="0" linenr="3" column="39" str="("/>
+    <tok fileIndex="0" linenr="3" column="40" str="int16_t"/>
+    <tok fileIndex="0" linenr="3" column="47" str=")"/>
+    <tok fileIndex="0" linenr="3" column="48" str=";"/>
+    <tok fileIndex="0" linenr="5" column="1" str="/*      12345678901234567890123456789012******* */"/>
+    <tok fileIndex="0" linenr="6" column="1" str="int32_t"/>
+    <tok fileIndex="0" linenr="6" column="9" str="engine_exhaust_gas_temperature_raw"/>
+    <tok fileIndex="0" linenr="6" column="43" str=";"/>
+    <tok fileIndex="0" linenr="7" column="1" str="int32_t"/>
+    <tok fileIndex="0" linenr="7" column="9" str="engine_exhaust_gas_temperature_scaled"/>
+    <tok fileIndex="0" linenr="7" column="46" str=";"/>
+    <tok fileIndex="0" linenr="8" column="1" str="int32_t"/>
+    <tok fileIndex="0" linenr="8" column="9" str="engine_exhaust_gas_temp_raw"/>
+    <tok fileIndex="0" linenr="8" column="36" str=";"/>
+    <tok fileIndex="0" linenr="9" column="1" str="int32_t"/>
+    <tok fileIndex="0" linenr="9" column="9" str="engine_exhaust_gas_temp_scaled"/>
+    <tok fileIndex="0" linenr="9" column="39" str=";"/>
+    <tok fileIndex="0" linenr="11" column="1" str="static"/>
+    <tok fileIndex="0" linenr="11" column="8" str="uint32_t"/>
+    <tok fileIndex="0" linenr="11" column="17" str="x"/>
+    <tok fileIndex="0" linenr="11" column="18" str="["/>
+    <tok fileIndex="0" linenr="11" column="19" str="4"/>
+    <tok fileIndex="0" linenr="11" column="20" str="]"/>
+    <tok fileIndex="0" linenr="11" column="22" str="="/>
+    <tok fileIndex="0" linenr="11" column="24" str="{"/>
+    <tok fileIndex="0" linenr="11" column="25" str="1"/>
+    <tok fileIndex="0" linenr="11" column="26" str=","/>
+    <tok fileIndex="0" linenr="11" column="28" str="2"/>
+    <tok fileIndex="0" linenr="11" column="29" str=","/>
+    <tok fileIndex="0" linenr="11" column="31" str="3"/>
+    <tok fileIndex="0" linenr="11" column="32" str="}"/>
+    <tok fileIndex="0" linenr="11" column="33" str=";"/>
+    <tok fileIndex="0" linenr="13" column="1" str="void"/>
+    <tok fileIndex="0" linenr="13" column="6" str="test_octal"/>
+    <tok fileIndex="0" linenr="13" column="16" str="("/>
+    <tok fileIndex="0" linenr="13" column="17" str="void"/>
+    <tok fileIndex="0" linenr="13" column="21" str=")"/>
+    <tok fileIndex="0" linenr="13" column="23" str="{"/>
+    <tok fileIndex="0" linenr="14" column="2" str="x"/>
+    <tok fileIndex="0" linenr="14" column="3" str="["/>
+    <tok fileIndex="0" linenr="14" column="4" str="0"/>
+    <tok fileIndex="0" linenr="14" column="5" str="]"/>
+    <tok fileIndex="0" linenr="14" column="7" str="="/>
+    <tok fileIndex="0" linenr="14" column="9" str="042"/>
+    <tok fileIndex="0" linenr="14" column="12" str=";"/>
+    <tok fileIndex="0" linenr="15" column="1" str="}"/>
+    <tok fileIndex="0" linenr="17" column="1" str="#"/>
+    <tok fileIndex="0" linenr="17" column="2" str="define"/>
+    <tok fileIndex="0" linenr="17" column="9" str="START_VALUE"/>
+    <tok fileIndex="0" linenr="17" column="21" str="65024u"/>
+    <tok fileIndex="0" linenr="19" column="1" str="void"/>
+    <tok fileIndex="0" linenr="19" column="6" str="test_wrap_around"/>
+    <tok fileIndex="0" linenr="19" column="22" str="("/>
+    <tok fileIndex="0" linenr="19" column="23" str="void"/>
+    <tok fileIndex="0" linenr="19" column="27" str=")"/>
+    <tok fileIndex="0" linenr="19" column="29" str="{"/>
+    <tok fileIndex="0" linenr="20" column="2" str="x"/>
+    <tok fileIndex="0" linenr="20" column="3" str="["/>
+    <tok fileIndex="0" linenr="20" column="4" str="0"/>
+    <tok fileIndex="0" linenr="20" column="5" str="]"/>
+    <tok fileIndex="0" linenr="20" column="7" str="="/>
+    <tok fileIndex="0" linenr="20" column="9" str="START_VALUE"/>
+    <tok fileIndex="0" linenr="20" column="21" str="+"/>
+    <tok fileIndex="0" linenr="20" column="23" str="512u"/>
+    <tok fileIndex="0" linenr="20" column="27" str=";"/>
+    <tok fileIndex="0" linenr="21" column="1" str="}"/>
+    <tok fileIndex="0" linenr="23" column="1" str="int"/>
+    <tok fileIndex="0" linenr="23" column="5" str="main"/>
+    <tok fileIndex="0" linenr="23" column="9" str="("/>
+    <tok fileIndex="0" linenr="23" column="10" str="void"/>
+    <tok fileIndex="0" linenr="23" column="14" str=")"/>
+    <tok fileIndex="0" linenr="23" column="16" str="{"/>
+    <tok fileIndex="0" linenr="24" column="2" str="union"/>
+    <tok fileIndex="0" linenr="24" column="8" str="{"/>
+    <tok fileIndex="0" linenr="25" column="3" str="int"/>
+    <tok fileIndex="0" linenr="25" column="7" str="i"/>
+    <tok fileIndex="0" linenr="25" column="8" str=";"/>
+    <tok fileIndex="0" linenr="26" column="3" str="long"/>
+    <tok fileIndex="0" linenr="26" column="8" str="long"/>
+    <tok fileIndex="0" linenr="26" column="13" str="j"/>
+    <tok fileIndex="0" linenr="26" column="14" str=";"/>
+    <tok fileIndex="0" linenr="27" column="2" str="}"/>
+    <tok fileIndex="0" linenr="27" column="4" str="a"/>
+    <tok fileIndex="0" linenr="27" column="6" str="="/>
+    <tok fileIndex="0" linenr="27" column="8" str="{"/>
+    <tok fileIndex="0" linenr="27" column="9" str="0"/>
+    <tok fileIndex="0" linenr="27" column="10" str="}"/>
+    <tok fileIndex="0" linenr="27" column="11" str=";"/>
+    <tok fileIndex="0" linenr="28" column="2" str="a"/>
+    <tok fileIndex="0" linenr="28" column="3" str="."/>
+    <tok fileIndex="0" linenr="28" column="4" str="i"/>
+    <tok fileIndex="0" linenr="28" column="6" str="="/>
+    <tok fileIndex="0" linenr="28" column="8" str="a"/>
+    <tok fileIndex="0" linenr="28" column="9" str="."/>
+    <tok fileIndex="0" linenr="28" column="10" str="j"/>
+    <tok fileIndex="0" linenr="28" column="11" str=";"/>
+    <tok fileIndex="0" linenr="29" column="2" str="return"/>
+    <tok fileIndex="0" linenr="29" column="9" str="0"/>
+    <tok fileIndex="0" linenr="29" column="10" str=";"/>
+    <tok fileIndex="0" linenr="30" column="1" str="}"/>
+  </rawtokens>
+  <suppressions>
+  </suppressions>
+<dump cfg="__GNUC__=1">
+  <standards>
+    <c version="c89"/>
+    <cpp version="c++20"/>
+  </standards>
+  <directivelist>
+    <directive file="/src/demo.c" linenr="1" str="#include &lt;stdint.h&gt;"/>
+    <directive file="/src/demo.c" linenr="17" str="#define START_VALUE 65024u"/>
+  </directivelist>
+  <macro-usage>
+    <macro name="START_VALUE" file="/src/demo.c" line="17" column="9" usefile="/src/demo.c" useline="20" usecolumn="9" is-known-value="true"/>
+  </macro-usage>
+  <tokenlist>
+    <token id="0x1f834a0" file="/src/demo.c" linenr="3" column="1" str="extern" scope="0x1f7edc0" type="name"/>
+    <token id="0x1f83550" file="/src/demo.c" linenr="3" column="8" str="int16_t" scope="0x1f7edc0" type="name"/>
+    <token id="0x1f832a0" file="/src/demo.c" linenr="3" column="16" str="func_param_without_name" scope="0x1f7edc0" type="name" function="0x1f7ef50"/>
+    <token id="0x1f83050" file="/src/demo.c" linenr="3" column="39" str="(" scope="0x1f7edc0" link="0x1f60ce0" valueType-type="short" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f60c80" file="/src/demo.c" linenr="3" column="40" str="int16_t" scope="0x1f7edc0" type="name"/>
+    <token id="0x1f60ce0" file="/src/demo.c" linenr="3" column="47" str=")" scope="0x1f7edc0" link="0x1f83050"/>
+    <token id="0x1f60d40" file="/src/demo.c" linenr="3" column="48" str=";" scope="0x1f7edc0"/>
+    <token id="0x1f82d50" file="/src/demo.c" linenr="6" column="1" str="int32_t" scope="0x1f7edc0" type="name"/>
+    <token id="0x1f82db0" file="/src/demo.c" linenr="6" column="9" str="engine_exhaust_gas_temperature_raw" scope="0x1f7edc0" type="name" varId="1" variable="0x1f823d0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f82e10" file="/src/demo.c" linenr="6" column="43" str=";" scope="0x1f7edc0"/>
+    <token id="0x1f83100" file="/src/demo.c" linenr="7" column="1" str="int32_t" scope="0x1f7edc0" type="name"/>
+    <token id="0x1f83160" file="/src/demo.c" linenr="7" column="9" str="engine_exhaust_gas_temperature_scaled" scope="0x1f7edc0" type="name" varId="2" variable="0x1f7f840" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f831c0" file="/src/demo.c" linenr="7" column="46" str=";" scope="0x1f7edc0"/>
+    <token id="0x1f83220" file="/src/demo.c" linenr="8" column="1" str="int32_t" scope="0x1f7edc0" type="name"/>
+    <token id="0x1f82eb0" file="/src/demo.c" linenr="8" column="9" str="engine_exhaust_gas_temp_raw" scope="0x1f7edc0" type="name" varId="3" variable="0x1f7f930" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f82f10" file="/src/demo.c" linenr="8" column="36" str=";" scope="0x1f7edc0"/>
+    <token id="0x1f82f70" file="/src/demo.c" linenr="9" column="1" str="int32_t" scope="0x1f7edc0" type="name"/>
+    <token id="0x1f82fd0" file="/src/demo.c" linenr="9" column="9" str="engine_exhaust_gas_temp_scaled" scope="0x1f7edc0" type="name" varId="4" variable="0x1f7fa20" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f82a30" file="/src/demo.c" linenr="9" column="39" str=";" scope="0x1f7edc0"/>
+    <token id="0x1f82a90" file="/src/demo.c" linenr="11" column="1" str="static" scope="0x1f7edc0" type="name"/>
+    <token id="0x1f82af0" file="/src/demo.c" linenr="11" column="8" str="uint32_t" scope="0x1f7edc0" type="name"/>
+    <token id="0x1f82b50" file="/src/demo.c" linenr="11" column="17" str="x" scope="0x1f7edc0" type="name" varId="5" variable="0x1f7fb10" astParent="0x1f82bb0" valueType-type="int" valueType-sign="unsigned" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0x1f82bb0" file="/src/demo.c" linenr="11" column="18" str="[" scope="0x1f7edc0" link="0x1f82860" astParent="0x1f828c0" astOperand1="0x1f82b50" astOperand2="0x1f82800" valueType-type="int" valueType-sign="unsigned" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0x1f82800" file="/src/demo.c" linenr="11" column="19" str="4" scope="0x1f7edc0" type="number" isInt="true" values="0x1f7ca50" astParent="0x1f82bb0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f82860" file="/src/demo.c" linenr="11" column="20" str="]" scope="0x1f7edc0" link="0x1f82bb0"/>
+    <token id="0x1f828c0" file="/src/demo.c" linenr="11" column="22" str="=" scope="0x1f7edc0" type="op" isAssignmentOp="true" astOperand1="0x1f82bb0" astOperand2="0x1f82920" valueType-type="int" valueType-sign="unsigned" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0x1f82920" file="/src/demo.c" linenr="11" column="24" str="{" scope="0x1f7edc0" link="0x1f5eff0" astParent="0x1f828c0" astOperand1="0x1f5ef30"/>
+    <token id="0x1f82980" file="/src/demo.c" linenr="11" column="25" str="1" scope="0x1f7edc0" type="number" isInt="true" values="0x1f7cc60" astParent="0x1f5ee70" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f5ee70" file="/src/demo.c" linenr="11" column="26" str="," scope="0x1f7edc0" astParent="0x1f5ef30" astOperand1="0x1f82980" astOperand2="0x1f5eed0"/>
+    <token id="0x1f5eed0" file="/src/demo.c" linenr="11" column="28" str="2" scope="0x1f7edc0" type="number" isInt="true" values="0x1f7ea70" astParent="0x1f5ee70" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f5ef30" file="/src/demo.c" linenr="11" column="29" str="," scope="0x1f7edc0" astParent="0x1f82920" astOperand1="0x1f5ee70" astOperand2="0x1f5ef90"/>
+    <token id="0x1f5ef90" file="/src/demo.c" linenr="11" column="31" str="3" scope="0x1f7edc0" type="number" isInt="true" values="0x1f793c0" astParent="0x1f5ef30" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f5eff0" file="/src/demo.c" linenr="11" column="32" str="}" scope="0x1f7edc0" link="0x1f82920"/>
+    <token id="0x1f5f0a0" file="/src/demo.c" linenr="11" column="33" str=";" scope="0x1f7edc0"/>
+    <token id="0x1f5f100" file="/src/demo.c" linenr="13" column="1" str="void" scope="0x1f7edc0" type="name"/>
+    <token id="0x1f5f160" file="/src/demo.c" linenr="13" column="6" str="test_octal" scope="0x1f7edc0" type="name" function="0x1f7f000"/>
+    <token id="0x1f5f1c0" file="/src/demo.c" linenr="13" column="16" str="(" scope="0x1f7edc0" link="0x1f844e0" valueType-type="void" valueType-reference="None"/>
+    <token id="0x1f5f220" file="/src/demo.c" linenr="13" column="17" str="void" scope="0x1f7edc0" type="name"/>
+    <token id="0x1f844e0" file="/src/demo.c" linenr="13" column="21" str=")" scope="0x1f7edc0" link="0x1f5f1c0"/>
+    <token id="0x1f84540" file="/src/demo.c" linenr="13" column="23" str="{" scope="0x1f7f0b0" link="0x1f84430"/>
+    <token id="0x1f845a0" file="/src/demo.c" linenr="14" column="2" str="x" scope="0x1f7f0b0" type="name" varId="5" variable="0x1f7fb10" astParent="0x1f84600" valueType-type="int" valueType-sign="unsigned" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0x1f84600" file="/src/demo.c" linenr="14" column="3" str="[" scope="0x1f7f0b0" link="0x1f842b0" values="0x1f83330" astParent="0x1f84310" astOperand1="0x1f845a0" astOperand2="0x1f84660" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x1f84660" file="/src/demo.c" linenr="14" column="4" str="0" scope="0x1f7f0b0" type="number" isInt="true" values="0x1f7c7a0" astParent="0x1f84600" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f842b0" file="/src/demo.c" linenr="14" column="5" str="]" scope="0x1f7f0b0" link="0x1f84600"/>
+    <token id="0x1f84310" file="/src/demo.c" linenr="14" column="7" str="=" scope="0x1f7f0b0" type="op" isAssignmentOp="true" values="0x1f78ef0" astOperand1="0x1f84600" astOperand2="0x1f84370" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x1f84370" file="/src/demo.c" linenr="14" column="9" str="042" scope="0x1f7f0b0" type="number" isInt="true" values="0x1f78f50" astParent="0x1f84310" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f843d0" file="/src/demo.c" linenr="14" column="12" str=";" scope="0x1f7f0b0"/>
+    <token id="0x1f84430" file="/src/demo.c" linenr="15" column="1" str="}" scope="0x1f7f0b0" link="0x1f84540"/>
+    <token id="0x1f84b70" file="/src/demo.c" linenr="19" column="1" str="void" scope="0x1f7edc0" type="name"/>
+    <token id="0x1f84bd0" file="/src/demo.c" linenr="19" column="6" str="test_wrap_around" scope="0x1f7edc0" type="name" function="0x1f80330"/>
+    <token id="0x1f84c30" file="/src/demo.c" linenr="19" column="22" str="(" scope="0x1f7edc0" link="0x1f84cf0" valueType-type="void" valueType-reference="None"/>
+    <token id="0x1f84c90" file="/src/demo.c" linenr="19" column="23" str="void" scope="0x1f7edc0" type="name"/>
+    <token id="0x1f84cf0" file="/src/demo.c" linenr="19" column="27" str=")" scope="0x1f7edc0" link="0x1f84c30"/>
+    <token id="0x1f84940" file="/src/demo.c" linenr="19" column="29" str="{" scope="0x1f803e0" link="0x1f810d0"/>
+    <token id="0x1f849a0" file="/src/demo.c" linenr="20" column="2" str="x" scope="0x1f803e0" type="name" varId="5" variable="0x1f7fb10" astParent="0x1f84a00" valueType-type="int" valueType-sign="unsigned" valueType-pointer="1" valueType-reference="None"/>
+    <token id="0x1f84a00" file="/src/demo.c" linenr="20" column="3" str="[" scope="0x1f803e0" link="0x1f84ac0" values="0x1f830e0" astParent="0x1f84710" astOperand1="0x1f849a0" astOperand2="0x1f84a60" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x1f84a60" file="/src/demo.c" linenr="20" column="4" str="0" scope="0x1f803e0" type="number" isInt="true" values="0x1f77590" astParent="0x1f84a00" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f84ac0" file="/src/demo.c" linenr="20" column="5" str="]" scope="0x1f803e0" link="0x1f84a00"/>
+    <token id="0x1f84710" file="/src/demo.c" linenr="20" column="7" str="=" scope="0x1f803e0" type="op" isAssignmentOp="true" values="0x1f84d80" astOperand1="0x1f84a00" astOperand2="0x1f847d0" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x1f84770" file="/src/demo.c" linenr="20" column="9" str="65024u" scope="0x1f803e0" type="number" isInt="true" isExpandedMacro="true" values="0x1f7c300" astParent="0x1f847d0" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x1f847d0" file="/src/demo.c" linenr="20" column="21" str="+" scope="0x1f803e0" type="op" isArithmeticalOp="true" values="0x1f83370" astParent="0x1f84710" astOperand1="0x1f84770" astOperand2="0x1f84830" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x1f84830" file="/src/demo.c" linenr="20" column="23" str="512u" scope="0x1f803e0" type="number" isInt="true" values="0x1f7c4c0" astParent="0x1f847d0" valueType-type="int" valueType-sign="unsigned" valueType-reference="None"/>
+    <token id="0x1f84890" file="/src/demo.c" linenr="20" column="27" str=";" scope="0x1f803e0"/>
+    <token id="0x1f810d0" file="/src/demo.c" linenr="21" column="1" str="}" scope="0x1f803e0" link="0x1f84940"/>
+    <token id="0x1f81130" file="/src/demo.c" linenr="23" column="1" str="int" scope="0x1f7edc0" type="name"/>
+    <token id="0x1f81190" file="/src/demo.c" linenr="23" column="5" str="main" scope="0x1f7edc0" type="name" function="0x1f80570"/>
+    <token id="0x1f811f0" file="/src/demo.c" linenr="23" column="9" str="(" scope="0x1f7edc0" link="0x1f80ea0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f81250" file="/src/demo.c" linenr="23" column="10" str="void" scope="0x1f7edc0" type="name"/>
+    <token id="0x1f80ea0" file="/src/demo.c" linenr="23" column="14" str=")" scope="0x1f7edc0" link="0x1f811f0"/>
+    <token id="0x1f80f00" file="/src/demo.c" linenr="23" column="16" str="{" scope="0x1f80620" link="0x1f7ebb0"/>
+    <token id="0x1f80f60" file="/src/demo.c" linenr="24" column="2" str="union" scope="0x1f80620" type="name"/>
+    <token id="0x1f80180" file="/src/demo.c" linenr="24" column="0" str="Anonymous0" scope="0x1f80620" type="name" type-scope="0x1f807b0"/>
+    <token id="0x1f80fc0" file="/src/demo.c" linenr="24" column="8" str="{" scope="0x1f807b0" link="0x1f802a0"/>
+    <token id="0x1f81020" file="/src/demo.c" linenr="25" column="3" str="int" scope="0x1f807b0" type="name"/>
+    <token id="0x1f80060" file="/src/demo.c" linenr="25" column="7" str="i" scope="0x1f807b0" type="name" varId="6" variable="0x1f7fda0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f800c0" file="/src/demo.c" linenr="25" column="8" str=";" scope="0x1f807b0"/>
+    <token id="0x1f80120" file="/src/demo.c" linenr="26" column="8" str="long" scope="0x1f807b0" type="name"/>
+    <token id="0x1f801e0" file="/src/demo.c" linenr="26" column="13" str="j" scope="0x1f807b0" type="name" varId="7" variable="0x1f7fe90" valueType-type="long long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f80240" file="/src/demo.c" linenr="26" column="14" str=";" scope="0x1f807b0"/>
+    <token id="0x1f802a0" file="/src/demo.c" linenr="27" column="2" str="}" scope="0x1f807b0" link="0x1f80fc0"/>
+    <token id="0x1f63880" file="/src/demo.c" linenr="27" column="0" str=";" scope="0x1f80620"/>
+    <token id="0x1f82490" file="/src/demo.c" linenr="27" column="0" str="union" scope="0x1f80620" type="name"/>
+    <token id="0x1f82430" file="/src/demo.c" linenr="27" column="0" str="Anonymous0" scope="0x1f80620" type="name" type-scope="0x1f807b0"/>
+    <token id="0x1f7f570" file="/src/demo.c" linenr="27" column="4" str="a" scope="0x1f80620" type="name" varId="8" variable="0x1f7fcb0" valueType-type="record" valueType-reference="None" valueType-typeScope="0x1f807b0"/>
+    <token id="0x1f7f5d0" file="/src/demo.c" linenr="27" column="6" str=";" scope="0x1f80620" isSplittedVarDeclEq="true"/>
+    <token id="0x1f824f0" file="/src/demo.c" linenr="27" column="4" str="a" scope="0x1f80620" type="name" varId="8" variable="0x1f7fcb0" astParent="0x1f82550" valueType-type="record" valueType-reference="None" valueType-typeScope="0x1f807b0"/>
+    <token id="0x1f82550" file="/src/demo.c" linenr="27" column="6" str="=" scope="0x1f80620" type="op" isAssignmentOp="true" astOperand1="0x1f824f0" astOperand2="0x1f7f630" valueType-type="record" valueType-reference="None" valueType-typeScope="0x1f807b0"/>
+    <token id="0x1f7f630" file="/src/demo.c" linenr="27" column="8" str="{" scope="0x1f80620" link="0x1f7f6f0" astParent="0x1f82550" astOperand1="0x1f7f690"/>
+    <token id="0x1f7f690" file="/src/demo.c" linenr="27" column="9" str="0" scope="0x1f80620" type="number" isInt="true" values="0x1f846f0" astParent="0x1f7f630" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f7f6f0" file="/src/demo.c" linenr="27" column="10" str="}" scope="0x1f80620" link="0x1f7f630"/>
+    <token id="0x1f7f750" file="/src/demo.c" linenr="27" column="11" str=";" scope="0x1f80620"/>
+    <token id="0x1f7f7b0" file="/src/demo.c" linenr="28" column="2" str="a" scope="0x1f80620" type="name" varId="8" variable="0x1f7fcb0" astParent="0x1f7f2b0" valueType-type="record" valueType-reference="None" valueType-typeScope="0x1f807b0"/>
+    <token id="0x1f7f2b0" file="/src/demo.c" linenr="28" column="3" str="." scope="0x1f80620" astParent="0x1f7f370" astOperand1="0x1f7f7b0" astOperand2="0x1f7f310" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f7f310" file="/src/demo.c" linenr="28" column="4" str="i" scope="0x1f80620" type="name" varId="9" variable="0x1f7fda0" astParent="0x1f7f2b0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f7f370" file="/src/demo.c" linenr="28" column="6" str="=" scope="0x1f80620" type="op" isAssignmentOp="true" astOperand1="0x1f7f2b0" astOperand2="0x1f7f430" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f7f3d0" file="/src/demo.c" linenr="28" column="8" str="a" scope="0x1f80620" type="name" varId="8" variable="0x1f7fcb0" astParent="0x1f7f430" valueType-type="record" valueType-reference="None" valueType-typeScope="0x1f807b0"/>
+    <token id="0x1f7f430" file="/src/demo.c" linenr="28" column="9" str="." scope="0x1f80620" astParent="0x1f7f370" astOperand1="0x1f7f3d0" astOperand2="0x1f7f490" valueType-type="long long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f7f490" file="/src/demo.c" linenr="28" column="10" str="j" scope="0x1f80620" type="name" varId="10" variable="0x1f7fe90" astParent="0x1f7f430" valueType-type="long long" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f7f4f0" file="/src/demo.c" linenr="28" column="11" str=";" scope="0x1f80620"/>
+    <token id="0x1f7ea90" file="/src/demo.c" linenr="29" column="2" str="return" scope="0x1f80620" type="name" astOperand1="0x1f7eaf0" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f7eaf0" file="/src/demo.c" linenr="29" column="9" str="0" scope="0x1f80620" type="number" isInt="true" values="0x1f844c0" astParent="0x1f7ea90" valueType-type="int" valueType-sign="signed" valueType-reference="None"/>
+    <token id="0x1f7eb50" file="/src/demo.c" linenr="29" column="10" str=";" scope="0x1f80620"/>
+    <token id="0x1f7ebb0" file="/src/demo.c" linenr="30" column="1" str="}" scope="0x1f80620" link="0x1f80f00"/>
+  </tokenlist>
+  <scopes>
+    <scope id="0x1f7edc0" type="Global">
+      <functionList>
+        <function id="0x1f7ef50" token="0" tokenDef="0x1f832a0" name="func_param_without_name" type="Function">
+          <arg nr="1" variable="0x1f7ff80"/>
+        </function>
+        <function id="0x1f7f000" token="0x1f5f160" tokenDef="0x1f5f160" name="test_octal" type="Function"/>
+        <function id="0x1f80330" token="0x1f84bd0" tokenDef="0x1f84bd0" name="test_wrap_around" type="Function"/>
+        <function id="0x1f80570" token="0x1f81190" tokenDef="0x1f81190" name="main" type="Function"/>
+      </functionList>
+      <varlist>
+        <var id="0x1f823d0"/>
+        <var id="0x1f7f840"/>
+        <var id="0x1f7f930"/>
+        <var id="0x1f7fa20"/>
+        <var id="0x1f7fb10"/>
+      </varlist>
+    </scope>
+    <scope id="0x1f7f0b0" type="Function" className="test_octal" bodyStart="0x1f84540" bodyEnd="0x1f84430" nestedIn="0x1f7edc0" function="0x1f7f000"/>
+    <scope id="0x1f803e0" type="Function" className="test_wrap_around" bodyStart="0x1f84940" bodyEnd="0x1f810d0" nestedIn="0x1f7edc0" function="0x1f80330"/>
+    <scope id="0x1f80620" type="Function" className="main" bodyStart="0x1f80f00" bodyEnd="0x1f7ebb0" nestedIn="0x1f7edc0" function="0x1f80570">
+      <varlist>
+        <var id="0x1f7fcb0"/>
+      </varlist>
+    </scope>
+    <scope id="0x1f807b0" type="Union" className="Anonymous0" bodyStart="0x1f80fc0" bodyEnd="0x1f802a0" nestedIn="0x1f80620">
+      <varlist>
+        <var id="0x1f7fda0"/>
+        <var id="0x1f7fe90"/>
+      </varlist>
+    </scope>
+  </scopes>
+  <variables>
+    <var id="0x1f7f840" nameToken="0x1f83160" typeStartToken="0x1f83100" typeEndToken="0x1f83100" access="Global" scope="0x1f7edc0" constness="0" volatility="0" isArgument="false" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x1f7f930" nameToken="0x1f82eb0" typeStartToken="0x1f83220" typeEndToken="0x1f83220" access="Global" scope="0x1f7edc0" constness="0" volatility="0" isArgument="false" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x1f7fa20" nameToken="0x1f82fd0" typeStartToken="0x1f82f70" typeEndToken="0x1f82f70" access="Global" scope="0x1f7edc0" constness="0" volatility="0" isArgument="false" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x1f7fb10" nameToken="0x1f82b50" typeStartToken="0x1f82af0" typeEndToken="0x1f82af0" access="Global" scope="0x1f7edc0" constness="0" volatility="0" isArgument="false" isArray="true" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="true"/>
+    <var id="0x1f7fcb0" nameToken="0x1f7f570" typeStartToken="0x1f82490" typeEndToken="0x1f82430" access="Local" scope="0x1f80620" constness="0" volatility="0" isArgument="false" isArray="false" isClass="true" isConst="false" isExtern="false" isLocal="true" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x1f7fda0" nameToken="0x1f80060" typeStartToken="0x1f81020" typeEndToken="0x1f81020" access="Public" scope="0x1f807b0" constness="0" volatility="0" isArgument="false" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x1f7fe90" nameToken="0x1f801e0" typeStartToken="0x1f80120" typeEndToken="0x1f80120" access="Public" scope="0x1f807b0" constness="0" volatility="0" isArgument="false" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x1f7ff80" nameToken="0" typeStartToken="0x1f60c80" typeEndToken="0x1f60c80" access="Argument" scope="0" constness="0" volatility="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x1f823d0" nameToken="0x1f82db0" typeStartToken="0x1f82d50" typeEndToken="0x1f82d50" access="Global" scope="0x1f7edc0" constness="0" volatility="0" isArgument="false" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+  </variables>
+  <valueflow>
+    <values id="0x1f7ca50">
+      <value intvalue="4" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x1f7cc60">
+      <value intvalue="1" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x1f7ea70">
+      <value intvalue="2" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x1f793c0">
+      <value intvalue="3" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x1f83330">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x1f7c7a0">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x1f78ef0">
+      <value intvalue="34" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x1f78f50">
+      <value intvalue="34" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x1f830e0">
+      <value intvalue="18446744073709551615" bound="Upper" impossible="true" path="0"/>
+    </values>
+    <values id="0x1f77590">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x1f84d80">
+      <value intvalue="65536" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x1f7c300">
+      <value intvalue="65024" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x1f83370">
+      <value intvalue="65536" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x1f7c4c0">
+      <value intvalue="512" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x1f846f0">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+    <values id="0x1f844c0">
+      <value intvalue="0" bound="Point" known="true" path="0"/>
+    </values>
+  </valueflow>
+</dump>
+</dumps>

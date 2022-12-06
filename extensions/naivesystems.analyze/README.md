@@ -46,17 +46,21 @@ Refer to <https://code.visualstudio.com/api/extension-guides/web-extensions#test
     yes | yarn vsce package
     export EXTSRC=$PWD
     rm -rf ~/release-vscode-ext && mkdir ~/release-vscode-ext && cd ~/release-vscode-ext
+    cp -r $EXTSRC/analyze-demo analyze-demo/
     cp -r $EXTSRC/media media/
     cp -r $EXTSRC/node_modules .
     mkdir out
     cp $EXTSRC/out/browser.js out/
     cp $EXTSRC/out/common.js out/
+    cp $EXTSRC/out/dependency.js out/
     cp $EXTSRC/out/extension.js out/
+    cp $EXTSRC/out/intro.js out/
     cp $EXTSRC/out/panel.js out/
     cp $EXTSRC/out/redmine.js out/
     cp $EXTSRC/out/results_pb.js out/
     cp $EXTSRC/out/results_tree.js out/
     cp $EXTSRC/out/sidebar.js out/
+    cp $EXTSRC/out/util.js out/
     mkdir -p dist/web
     cp $EXTSRC/dist/web/main.js dist/web
     cp $EXTSRC/dist/web/main.js.LICENSE.txt dist/web

@@ -1,0 +1,91 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "artifacts": [
+        {
+          "length": 542,
+          "location": {
+            "uri": "file:///src/demo.c"
+          },
+          "mimeType": "text/plain",
+          "roles": [
+            "resultFile"
+          ]
+        }
+      ],
+      "columnKind": "unicodeCodePoints",
+      "results": [
+        {
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "importance": "essential",
+                      "location": {
+                        "message": {
+                          "text": "[misrac-2012-19.1]: violate rule 19.1, assignment has overlap"
+                        },
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "index": 0,
+                            "uri": "file:///src/demo.c"
+                          },
+                          "region": {
+                            "endColumn": 6,
+                            "startColumn": 6,
+                            "startLine": 28
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "index": 0,
+                  "uri": "file:///src/demo.c"
+                },
+                "region": {
+                  "endColumn": 6,
+                  "startColumn": 6,
+                  "startLine": 28
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "[misrac-2012-19.1]: violate rule 19.1, assignment has overlap"
+          },
+          "ruleId": "misra_c_2012.AssignmentOverlap",
+          "ruleIndex": 0
+        }
+      ],
+      "tool": {
+        "driver": {
+          "fullName": "clang static analyzer",
+          "language": "en-US",
+          "name": "clang",
+          "rules": [
+            {
+              "fullDescription": {
+                "text": "Check for assignment overlap"
+              },
+              "id": "misra_c_2012.AssignmentOverlap",
+              "name": "misra_c_2012.AssignmentOverlap"
+            }
+          ],
+          "version": "clang version 12.0.0 git (git)"
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}

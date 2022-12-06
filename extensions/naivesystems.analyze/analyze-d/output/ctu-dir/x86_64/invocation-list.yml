@@ -1,0 +1,21 @@
+/src/demo.c:
+- /usr/bin/clang-13
+- --target=x86_64-redhat-linux
+- -isystem
+- /usr/local/include
+- -isystem
+- /usr/include
+- -c
+- -x
+- c
+- /src/demo.c
+- -std=gnu17
+- -D__clang_analyzer__
+- -w
+- -isystem
+- /usr/lib/gcc/x86_64-redhat-linux/11/include/
+- -isystem
+- /usr/include
+- -include
+- stddef.h
+- -D__GNUC__

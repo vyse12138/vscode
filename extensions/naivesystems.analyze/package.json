@@ -71,7 +71,7 @@
       },
       {
         "command": "nsa-result-highlight.run",
-        "title": "Generate Tarball of HEAD files",
+        "title": "从本地运行静态检查",
         "category": "Naive System Analyze",
         "icon": {
           "light": "media/run-light.svg",
@@ -108,9 +108,108 @@
           "command": "nsa-result-highlight.import-results-from-zip",
           "when": "view == nsa-result-highlight.panel",
           "group": "navigation"
+        },
+        {
+          "command": "nsa-result-highlight.run",
+          "when": "view == nsa-result-highlight.panel",
+          "group": "navigation"
         }
       ]
-    }
+    },
+    "configuration": [
+      {
+        "title": "Naive Systems",
+        "properties": {
+          "naivesystems.hasIntroShown": {
+            "type": "boolean",
+            "scope": "window",
+            "default": false,
+            "description": "Boolean value that represents if the introduction has already shown"
+          }
+        }
+      },
+      {
+        "title": "Naive Systems",
+        "properties": {
+          "naivesystems.dependency": {
+            "type": "string",
+            "scope": "window",
+            "enum": [
+              "Podman",
+              "VirtualBox"
+            ],
+            "default": "",
+            "description": "Used for win10 to indicate which dependency is used (podman or vbox)"
+          }
+        }
+      },
+      {
+        "title": "Naive Systems",
+        "properties": {
+          "naivesystems.redmineUrl": {
+            "type": "string",
+            "scope": "window",
+            "default": "",
+            "description": "Root URL for redmine"
+          }
+        }
+      },
+      {
+        "title": "Naive Systems",
+        "properties": {
+          "naivesystems.restApiKey": {
+            "type": "string",
+            "scope": "window",
+            "default": "",
+            "description": "REST API key to use redmine API"
+          }
+        }
+      },
+      {
+        "title": "Naive Systems",
+        "properties": {
+          "naivesystems.projectName": {
+            "type": "string",
+            "scope": "window",
+            "default": "",
+            "description": "Name of the project to create scan task"
+          }
+        }
+      },
+      {
+        "title": "Naive Systems",
+        "properties": {
+          "naivesystems.scanTrackerID": {
+            "type": "integer",
+            "scope": "window",
+            "default": 10000,
+            "description": "ID of scan tracker"
+          }
+        }
+      },
+      {
+        "title": "Naive Systems",
+        "properties": {
+          "naivesystems.archiveHashID": {
+            "type": "integer",
+            "scope": "window",
+            "default": 0,
+            "description": "Custom field ID of archive hash"
+          }
+        }
+      },
+      {
+        "title": "Naive Systems",
+        "properties": {
+          "naivesystems.imageName": {
+            "type": "string",
+            "scope": "window",
+            "default": "",
+            "description": "Name of the image used by podman"
+          }
+        }
+      }
+    ]
   },
   "scripts": {
     "compile": "tsc -p ./",
@@ -120,7 +219,8 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "compile-web": "webpack --entry ./src/browser.ts",
     "watch-web": "webpack --watch --entry ./src/browser.ts",
-    "package-web": "webpack --mode production --devtool hidden-source-map --entry ./src/browser.ts"
+    "package-web": "webpack --mode production --devtool hidden-source-map --entry ./src/browser.ts",
+    "unit-test": "ts-mocha src/**/*.test.ts"
   },
   "devDependencies": {
     "@types/adm-zip": "^0.5.0",
@@ -137,6 +237,7 @@
     "mocha": "^9.1.3",
     "process": "^0.11.10",
     "ts-loader": "^9.3.0",
+    "ts-mocha": "^10.0.0",
     "typescript": "^4.5.5",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.9.2"
@@ -144,15 +245,19 @@
   "dependencies": {
     "adm-zip": "^0.5.9",
     "assert": "^2.0.0",
+    "axios": "^0.27.2",
     "browserify-zlib": "^0.2.0",
     "buffer": "^6.0.3",
     "child_process": "^1.0.2",
     "crypto-browserify": "^3.12.0",
+    "http-browserify": "^1.7.0",
     "js-sha1": "^0.6.0",
+    "os-browserify": "^0.3.0",
     "path-browserify": "^1.0.1",
     "prettier": "^2.6.0",
     "stream-browserify": "^3.0.0",
     "ts-protoc-gen": "^0.15.0",
+    "url": "^0.11.0",
     "vsce": "^2.7.0"
   }
 }

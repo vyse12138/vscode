@@ -1,0 +1,22 @@
+
+õ
+/src/demo.cÁ[C1109][misra-c2012-5.1]: violation of misra-c2012-5.1
+Variable: engine_exhaust_gas_temperature_scaled
+First identifier location: /src/demo.c:7:1
+Duplicated identifier location: /src/demo.c:6:1"
+/src/demo.c"
+/src/demo.c
+ë
+/src/demo.c·[C1109][misra-c2012-5.1]: violation of misra-c2012-5.1
+Variable: engine_exhaust_gas_temp_raw
+First identifier location: /src/demo.c:8:1
+Duplicated identifier location: /src/demo.c:6:1"
+/src/demo.c"
+/src/demo.c
+î
+/src/demo.c	º[C1109][misra-c2012-5.1]: violation of misra-c2012-5.1
+Variable: engine_exhaust_gas_temp_scaled
+First identifier location: /src/demo.c:9:1
+Duplicated identifier location: /src/demo.c:6:1"
+/src/demo.c	"
+/src/demo.c

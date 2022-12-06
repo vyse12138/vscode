@@ -1,0 +1,17 @@
+body {
+  --text: #616161;
+  --text-highlight: #55a7f8;
+  --border: #d7d7d7;
+  --border-highlight: #9ac1f4;
+  --bg-100: #e4e6f0;
+  --bg-200: #f8f4f4;
+  --bg-300: #f8f8f8;
+  --bg-400: #ffffff;
+  --bg-highlight: #285eba;
+  color: var(--text);
+  background-color: var(--bg-400);
+}
+
+.row:focus {
+  color: var(--bg-400);
+}

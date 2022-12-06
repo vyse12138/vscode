@@ -1,0 +1,6 @@
+
+¶
+/src/demo.c“[C0513][misra-c2012-8.2]: function types shall be in prototype form with named parameters
+unnamed parameter.
+function name: func_param_without_name"
+/src/demo.c

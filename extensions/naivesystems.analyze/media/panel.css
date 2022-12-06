@@ -18,6 +18,7 @@ body {
   position: sticky;
   background-color: var(--bg-400);
   top: 0;
+  z-index: 10;
 }
 
 .filter {
@@ -63,23 +64,17 @@ body {
   color: var(--text-highlight);
 }
 
-table {
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-}
-
 .head {
+  display: flex;
   margin: 0;
-  padding: 10.5px 32px;
   font-weight: bold;
   border-bottom: 1px solid var(--border);
-  height: 15px;
-  line-height: 15px;
   font-size: 12px;
+  padding-right: 10px;
 }
 
 .row {
+  display: flex;
   cursor: pointer;
 }
 
@@ -97,21 +92,7 @@ table {
   background-color: var(--bg-highlight);
 }
 
-.head .ceil {
-  overflow: visible;
-  border-left: 1px solid var(--border);
-}
-
-.row .ceil {
-  border-left: 1px solid var(--border);
-}
-
-.row .ceil:first-child {
-  padding-left: 32px;
-  border-left: none;
-}
-
-.head .ceil:first-child {
+.ceil:first-child {
   padding-left: 32px;
   border-left: none;
 }
@@ -126,10 +107,15 @@ table {
   height: 15px;
   line-height: 15px;
   font-size: 12px;
+  padding: 6px;
+  border-left: 1px solid var(--border);
+  overflow-y: visible;
+}
+
+.truncate {
   white-space: nowrap;
   overflow-x: hidden;
   text-overflow: ellipsis;
-  padding: 6px;
 }
 
 .arrow {
@@ -150,20 +136,47 @@ table {
   width: 128px;
 }
 
-.w-full {
-  width: 100%;
-}
-
 #unknown-results {
   border-top: 8px solid var(--bg-100);
+  height: 300px;
+  overflow-y: scroll;
 }
 
 .display-none {
   display: none;
 }
 
-#unknown-results > * {
-  display: flex;
+#demo {
+  position: fixed;
+  top: 12px;
+  right: 50px;
+  z-index: 20;
+  background-color: var(--bg-200);
+  padding: 12px;
+  border: 1px solid var(--border-highlight);
+  cursor: pointer;
+}
+
+#demo-top-arrow {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--bg-200);
+}
+
+#demo-top-arrow-outline {
+  position: absolute;
+  top: -12px;
+  right: 8px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid var(--border-highlight);
+}
+
+#virtual-list-container {
+  overflow-y: scroll;
 }
 
 .drag {
@@ -171,17 +184,11 @@ table {
   top: 0;
   left: calc(100% - 2px);
   width: 4px;
-  z-index: 1;
+  z-index: 30;
   cursor: col-resize;
   user-select: none;
 }
 
 .drag:hover {
   background-color: var(--border);
-}
-
-.truncate {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
